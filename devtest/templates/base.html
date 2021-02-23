@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Full Stack Developer Test | Home </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!-- Custom Theme files -->
+{% load static %}
+<link href="{% static 'assets/css/bootstrap.css' %}" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'assets/css/style.css' %}" type="text/css" rel="stylesheet" media="all">   
+<link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet">	<!-- font-awesome icons -->     
+<link rel="stylesheet" href="{% static 'assets/css/flexslider.css' %}" type="text/css" media="screen" />  <!-- flexslider-CSS -->  
+<link rel="stylesheet" href="{% static 'assets/css/chocolat.css' %}" type="text/css" media="screen"> 
+<!-- //Custom Theme files --> 
+
+<!-- js -->
+<script src="{% static 'assets/js/jquery-2.2.3.min.js' %}"></script>  
+<!-- //js -->
+
+<!-- web-fonts -->    
+<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Aguafina+Script" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet"> 
+<!-- //web-fonts -->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    {% block content %}
+    {% endblock content %}
+</body>
+
+
+<!-- timer scripts --> 
+<script type="text/javascript" src="{% static 'assets/js/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/moment-timezone-with-data.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/timer.js' %}"></script>
+<!-- //timer scripts -->
+<!-- start-smooth-scrolling --> 
+<script type="text/javascript" src="{% static 'assets/js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/easing.js' %}"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+		
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!-- //end-smooth-scrolling -->	 
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+		var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+		};
+		*/
+		
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		
+	});
+</script>
+<!-- //smooth-scrolling-of-move-up -->   
+<!-- Scrolling Nav JavaScript --> 
+<script src="{% static 'assets/js/scrolling-nav.js' %}"></script>  
+<!-- //fixed-scroll-nav-js -->  
+<!-- bth hover effect --> 
+<script>
+$(function() {
+	$('.btn-6')
+	.on('mouseenter', function(e) {
+		var parentOffset = $(this).offset(),
+		relX = e.pageX - parentOffset.left,
+		relY = e.pageY - parentOffset.top;
+		$(this).find('span').css({
+		top: relY,
+		left: relX
+		})
+	})
+	.on('mouseout', function(e) {
+		var parentOffset = $(this).offset(),
+		relX = e.pageX - parentOffset.left,
+		relY = e.pageY - parentOffset.top;
+		$(this).find('.btn-6 span').css({
+		top: relY,
+		left: relX
+		})
+	}); 
+});
+</script>	
+<!-- //bth hover effect --> 
+<!-- jarallax -->
+<script src="{% static 'assets/js/jarallax.js' %}"></script>
+<script src="{% static 'assets/js/SmoothScroll.min.js' %}"></script>
+<script type="text/javascript">
+	/* init Jarallax */
+	$('.jarallax').jarallax({
+		speed: 0.5,
+		imgWidth: 1366,
+		imgHeight: 768
+	})
+</script>
+<!-- //jarallax -->   
+<!-- FlexSlider --> 
+<script defer src="{% static 'assets/js/jquery.flexslider.js' %}"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		$('.flexslider').flexslider({
+		animation: "slide",
+		start: function(slider){
+			$('body').removeClass('loading');
+		}
+		});
+	});
+</script>
+<!-- //End-FlexSlider -->  
+<!-- pop-up-script -->
+<script src="{% static 'assets/js/jquery.chocolat.js' %}"></script>
+<script type="text/javascript">
+$(function() {
+	$('.view-seventh a').Chocolat();
+});
+</script>
+<!-- //pop-up-script -->  
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static 'assets/js/bootstrap.js' %}"></script>
+</html>
