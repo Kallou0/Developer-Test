@@ -32,7 +32,7 @@ body a:focus {
 }
 /*-- banner --*/ 
 .home-banner{ 
-	background:url(../images/main.png)no-repeat center bottom;
+	background:url(../img/main.png)no-repeat center bottom;
 	-webkit-background-size:cover;
 	-moz-background-size:cover; 
 	background-size:cover;
